@@ -12,3 +12,7 @@ node_modules
 
 # Ignore SASS config files
 .sass-cache
+
+# Ignore Python Env-Specific files
+db.sqlite3
+Pipfile.lock
