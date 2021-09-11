@@ -16,3 +16,6 @@ node_modules
 # Ignore Python Env-Specific files
 db.sqlite3
 Pipfile.lock
+
+venv
+**/__pycache__
