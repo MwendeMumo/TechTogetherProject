@@ -19,3 +19,5 @@ Pipfile.lock
 
 venv
 **/__pycache__/
+#ignore Python compile files
+*.pyc

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from . import models
-from django.db.models import Sum
+from django.db.models import Sum, Avg
 from django.views import generic
 from django.views.generic.edit import CreateView
 
@@ -19,6 +19,7 @@ class DataVizView(generic.ListView):
         context = super(DataVizView, self).get_context_data(**kwargs)
         # context['Loan_Rate_After_Default_sum'] = models.User.objects.all().aggregate(sum_all=Sum('Loan_Rate_After_Default')).get('sum_all')
         context['Loan_Rate_After_Default_sum'] = models.User.objects.all().aggregate(Sum('Loan_Rate_After_Default'))
+        context['Initial_Interest_Rate_average'] = models.User.objects.all().aggregate(Avg('Initial_Interest_Rate'))
         return context
 
  
